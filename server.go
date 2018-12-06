@@ -28,6 +28,12 @@ import (
 )
 
 func main() {
+	//Todo: set environtment variables in secret file instead of hardcoding it
+	os.Setenv("CHANNEL_SECRET", "123");
+	os.Setenv("CHANNEL_TOKEN", "123");
+	os.Setenv("APP_BASE_URL", "123");
+	os.Setenv("PORT", "15123");
+	os.Setenv("ENDPOINT_BASE", "https://tahusumedangrenyahlinebot.herokuapp.com/");
 	app, err := NewKitchenSink(
 		os.Getenv("CHANNEL_SECRET"),
 		os.Getenv("CHANNEL_TOKEN"),
